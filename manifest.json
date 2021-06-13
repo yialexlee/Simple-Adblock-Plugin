@@ -1,0 +1,22 @@
+{
+    "name": "Ads Blocker",
+    "manifest_version": 2,
+    "version": "1.0",
+    "description": "Ads Blocker",
+	"permissions": [ "webRequest", "webRequestBlocking" ],
+    "browser_action":
+    {
+        "default_icon": "img/icon.png",
+        "default_title": "Ads Blocker"
+    },
+    
+    "icons":{
+		"128": "img/icon.png"
+    },
+    
+    "content_scripts": [
+    {
+		"matches": ["<all_urls>"], 
+        "js": ["js/block.js" ]
+    }]
+}
